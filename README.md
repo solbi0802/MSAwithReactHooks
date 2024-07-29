@@ -44,4 +44,10 @@
 
 ## ch2 전역 상태에 대한 기초적인 접근법
 
+- [react context 기본 내용](https://ko.legacy.reactjs.org/docs/context.html)
+
+- context 전파의 한계 
+: 새로운 컨텍스트 값을 받으면 모든 컨텍스트 소비자 컴포넌트가 리렌더링 된다.
+이를 방지하기 위해 컴포넌트를 memo로 감싸서 방지해야 함
+
 ## ch3 라이브러리 구현 및 용도
