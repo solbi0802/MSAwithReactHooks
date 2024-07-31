@@ -75,3 +75,8 @@
 - 속성 감지 기반으로 자동으로 렌더링 최적화를 수행하는 상태 사용 추적 라이브러리
 - 불필요한 리렌더링 제거 기능 제공
 - proxy-compare, use-context-selector 라이브러리에 의존
+
+### Zustand, Jotai, Valtio의 유사점과 차이점
+- ZuStand는 Redux와 사용법, 스토어 모델 측면에서 유사하지만 Redux와 달리 리듀서를 기반으로 하지  않음
+- Jotai는 API측면에서 Recoil과 유사하지만 선택자 기반이 아니고 렌더링 최적화를 위한 최소한의 API 제공이 목표
+- Valtio는 변경 가능한 갱신 모델 측면에서 MobX와 조금 유사하지만 렌더링 최적화 구현 방식이 매우 다름
