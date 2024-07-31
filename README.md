@@ -76,7 +76,24 @@
 - 불필요한 리렌더링 제거 기능 제공
 - proxy-compare, use-context-selector 라이브러리에 의존
 
-### Zustand, Jotai, Valtio의 유사점과 차이점
+### 세 가지(Zustand, Jotai, Valtio) 전역 상태 라이브러리의 유사점과 차이점
 - ZuStand는 Redux와 사용법, 스토어 모델 측면에서 유사하지만 Redux와 달리 리듀서를 기반으로 하지  않음
 - Jotai는 API측면에서 Recoil과 유사하지만 선택자 기반이 아니고 렌더링 최적화를 위한 최소한의 API 제공이 목표
 - Valtio는 변경 가능한 갱신 모델 측면에서 MobX와 조금 유사하지만 렌더링 최적화 구현 방식이 매우 다름
+- ZuStand,Redux 비교 
+  - 디렉토리 구조: Redux는 features 디렉토리 구조 제안, Zustand는 개발자가 알아서 하도록
+  - 스토어 생성: Reudx는 Immer를 기본적으로 사용, Zustand는 Immer는 선택사항
+  - 상태 전파 측면: Reudx는 컨텍스트 사용, Zustand는 모듈 임포트 사용
+  - Redux는 단방향 데이터 흐름을 기반으로 상태 갱신 시 액션을 디스패치해야 함(Redux Toolkit), Zustand는 데이터 흐름에 대한 의견을 제시하지 않으며 개발자가 모든 것을 처리해야 함.
+
+- Jotai와 Recoil 비교
+  - key 문자열의 존재: Jotai는 key 문자열 생략 가능, Recoil은 객체 참조에 의존하지 않는 key 문자열 기반으로 직렬화가 가능하다
+  - atom 함수: Jotail의 atom 함수는 Recoil의 atom과 selector를 모두 대체한다. 하지만 모든 것을 표현 하는 것이 불가능하고 Jotai의 다른 함수가 필요할 수도 있다는 단점 존재
+  - Jotai의 공급자 제거 모드(provider-less mode)는 Provider 컴포넌트를 생략할 수 있게 해주는 기능으로 개발자 친화적인 기능이다.
+
+- Valtio와 Mobx 사용하기
+  - 갱신 방식: Mobx는 클래스 기반, Valtio는 특정 스타일을 강요하지 않음
+  - 렌더링 최적화 방식: Valtio는 훅을 사용, Mobx는 옵저버 방식 사용
+- Zustand, Jotai, Valtio 비교
+  - 상태가 어디에 위치하는 지? 리액트에는 상태에 대한 방식으로 모듈상태, 컴포넌트 상태가 있다. Zustand, Valtio는 모듈 상태 기반, Jotai는 컴포넌트 상태 기반
+  - 상태 갱신 스타일?  Zustand는 불변 상태 모델(객체 생성 후 변경x) 기반, Valtio는 변경 가능한 상태 모델 기반, 
