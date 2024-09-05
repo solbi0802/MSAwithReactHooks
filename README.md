@@ -1,4 +1,9 @@
 # 리액트 훅을 활용한 마이크로 상태관리
+<p align="center">
+ <img src = "https://github.com/user-attachments/assets/29a7b332-a3b6-4964-80cb-2d74d061b4ed">
+<br/>
+  <b>리액트 훅을 활용한 마이크로 상태 관리</b>  책을 읽고 정리했습니다.
+</p>
 
 ## ch1 리액트 훅을 이용한 마이크로 상태 관리
 
